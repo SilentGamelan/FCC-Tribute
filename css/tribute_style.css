@@ -119,14 +119,14 @@ header {
 
 
 .issa-portrait {
-  text-align: middle;
+  text-align: center;
   border-style: groove;
   border-width: thick;
   box-shadow: 0em 0.1em 2em 0.5em #000000;
 }
 
 .img-caption {
-  text-align: middle;
+  text-align: center;
   background: rgba(0, 0, 0, 0.7);
   height: 2em;
   width: 40%;
@@ -264,7 +264,7 @@ Required slightly darker background for contrast - better to just make a separat
   -webkit-text-stroke: 0.02em black;
 }
 
-.author-sig{
+.author-sig {
   width: 25%;
   height: 4em;
   margin-top: 2em;
@@ -273,6 +273,7 @@ Required slightly darker background for contrast - better to just make a separat
 }
 
 /* as these are unique items, with specific styling concerns, is it legitimate to use ID and class chain? */
+
 
 #bonfires .poem-vert {
   padding-top: 3em;

@@ -1,0 +1,310 @@
+/* Using responsive design with media queries
+   so default will be mobile, specify styles for others */
+  
+/* General styling (ie; common to mobile and other devices) */  
+  
+a:link {
+    color: teal ;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: teal ;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: gold;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: green;
+    text-decoration: none;
+  }
+  
+  
+  body {
+    background: url(https://lh3.googleusercontent.com/uBF21Z_f-nTj-Whd-RYFBfuUdI9P-g06C6fA23_1eB4M5qaWcjPj7kN4RNlsuBdhrIryDL_SwWOzgqrMQUYUkTMKh40ZOFdGG6mBt0vxYvdouvH_eRmWDmCTN-m-Vx-MbFep0MErty4YhhyXd3-9I3LM2KF8OFaBRmkmuBwn2X1niLKtPfPzzuku9NBnGZzuc4fkrUxzLOn0QXU5p0BZaNOUXRFZyGTqLIceNZhLD-LvryJFpDRcDfz31UfT9XsmPKibLoMLGDJGnNcYFWtqkVqVFniQ3jvA3bpaJG-u-kcnVz7OH4LRXwX1QjmIGQrq_XCI0DfRfIHShvyWgPLGDO1-9LBxZCf8KiI2YQsoOa-M8rSScb8voZk9tNlN40lfzTAJaSxOFnQtUN-UVxF_7H4h95N6E8dHNrvTcigE0JAIp3vaTwOqFgbW95ZA6hyniy1L6St7Z6okz8-7a5BUi08-U3BVyN_puXPq-aIj0krLEj8oCZlrp4-6DptxQx5ZsVgKESiVQCjLYnw1RTnSZsz3cwLV88faMOidmB-smdRCh3OU7D8M73Ei-D7GyiHY0vNKuHLABlyMxiSqxvyrSj607F2Xbs4_iQGkArHEJIZiZSlKmpykLWtbr0z6KeOxwMnnUcBnqJLgrtqSoecIGwTnArUcYsUQ-ELrpZKAHqsmeg=w704-h938-no-tmp.jpg)
+      no-repeat center fixed;
+    background-size: cover;
+    background-color: #000000;
+  }
+  
+  h2 {
+    color: #f2f3f4;
+  }
+  
+  .text-container {
+    text-align: center;
+  }
+  
+  .text-shadebox {
+    background: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .matcha {
+    color: #87cc1d;
+  }
+  
+  .outlined {
+     -webkit-text-stroke: 0.01em black;
+  }
+   
+  
+  header {
+    text-align: center;
+    /* -webkit-text-fill-color: transparent;*/
+    -webkit-text-stroke: 0.05em black;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 1%;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
+    
+  /* Classes */
+  
+  /* Custom code to allow styling of numbering elements*/
+  .custom-list {
+    list-style-type: none;
+  }
+  
+  .custom-list li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0.5em;
+    padding-bottom: 2em;
+    margin-bottom: 0.5em;
+    color: #f2f3f4;
+    -webkit-text-stroke: 0.02em black;
+    text-align: left;
+  }
+  
+  /*  counter-increment property allows declaring of a named counter variable, here "step-counter"
+      I won't be using this, as I don't need an ordered list    
+  
+  .custom-bullets li{
+    counter-increment: step-counter
+  }
+  /*
+  
+  /*  :before and :after are "pseudo-elements" 
+      They can be used to insert generated content before or after an element 
+      The content property is used to generate the content for the pseudo-elements; there are several properties which include 
+      counter   none  url   inherit
+  
+      I'm going to use this to set the bullet points to be the kanji for "tea"
+  */
+  
+  .custom-list li::before {
+    /* content: counter(step-counter) <- if wanted an orded list, with code above */
+    content: "茶";
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 100%;
+    background-color: #87cc1d;
+    color: black;
+    font-weight: bold;
+    margin: auto;
+    padding-left: 0.25em;
+    border-radius: 100%;
+    position: absolute;
+    left: -1.75em;
+  }
+  
+  
+  .issa-portrait {
+    text-align: center;
+    border-style: groove;
+    border-width: thick;
+    box-shadow: 0em 0.1em 2em 0.5em #000000;
+  }
+  
+  .img-caption {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    height: 2em;
+    width: 40%;
+    margin-top: 0.5em;
+    margin-left: 22em;
+    padding-top: 0.25em;
+    
+  }
+  
+  .issa-sig {
+    vertical-align: middle;
+    width: 1em;
+    word-wrap: break-word;
+    display: inline-block;
+  }
+  
+  .issa-sig-small {
+    vertical-align: middle;
+    text-align: center;
+    width: 1em;
+    word-wrap: break-word;
+    display: inline-block;
+    margin-right: 10%;
+    margin-left: 1em;
+  }
+  
+  .inline-eng-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .poem-box {
+    width: 20em;
+    height: 25em;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-style: groove;
+    border-width: thin;
+    box-shadow: 0em 0.1em 4em 1.5em #000000;
+    margin-top: 12em;
+  }
+  
+  .pb-right {
+    float: right;
+    margin-right: 2.5em;
+  }
+  
+  .pb-left {
+    float: left;
+    margin-left: 2.5em;
+  }
+  
+  .poem-text {
+    color: #87cc1d;
+    -webkit-text-stroke: 0.25px black;
+    vertical-align: middle;
+    float: left;
+    font-size: small;
+    margin: 5em 0em 1em 1.5em;
+    width: 18em;
+    padding-left: 2em;
+  }
+  
+  .poem-trans {
+    -webkit-text-stroke: 0.01em black;
+    vertical-align: middle;
+    float: left;
+    font-size: small;
+    color: #f2f3f4;
+    margin: 3em 0em 0em 1.5em;
+    width: 18em;
+    padding-left: 2em;
+  }
+  
+  .poem-vert {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    word-wrap: break-word;
+    margin-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+  
+  
+  .main-text {
+    width: 85%;
+    margin-top: 0.5%;
+    margin-bottom: 0.25%;
+    padding: 1em 1em 1em 1em;
+    border-style: groove;
+    border-width: thin;
+    box-shadow: 0px 1px 16px 6px #000000;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* ?? Is chaining like this good practice? ??
+  Required slightly darker background for contrast - better to just make a separate class? */
+  .timeline-col.text-shadebox {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  
+  .sidebar1 {
+    width: 30%;
+    margin: 1em;
+    float: left;
+  }
+  
+  .timeline-col {
+    text-align: center;
+    width: 30%;
+    margin: 3em 1em 1em 1em;
+    float: left;
+  }
+  
+  .sidebar2 {
+    width: 30%;
+    margin: 1em;
+    float: right;
+  }
+  
+  .timeline {
+    padding: 2em 1em 1em 0em;
+  }
+  
+  .link-banner {
+    margin-top: 2em;
+    margin-left: -1em;
+    padding-top: 2em;
+    width: 50%;
+    height: 7em;
+    color: #f2f3f4;
+    -webkit-text-stroke: 0.02em black;
+  }
+  
+  .author-sig {
+    width: 25%;
+    height: 4em;
+    margin-top: 2em;
+    margin-left: 34em;
+    padding-top: 1.5em;
+  }
+  
+  /* as these are unique items, with specific styling concerns, is it legitimate to use ID and class chain? */
+  
+  
+  #bonfires .poem-vert {
+    padding-top: 3em;
+  }
+  
+  #shower.poem-box {
+    margin-top: 2em;
+  }
+  
+  #shower .poem-vert {
+    padding-top: 3em;
+  }
+  
+  #duck .poem-vert {
+    margin-top: 1.5em;
+  }
+  
+  #cat .poem-vert {
+    margin-top: 2.5em;
+  }
+  
+  #hat .poem-vert {
+    margin-top: 1em;
+  }
+  
+  #dew .poem-vert {
+    padding-top: 1em;
+  }
+  
+  #fly .poem-text {
+    margin-top: 2em;
+  }
+  
+  

@@ -1,0 +1,6 @@
+* Correct styling to avoid need to use bootstrap
+    - currently text looks wrong without it
+        font?
+        font-size - likely
+        line-height - likely (see bootstrap changes list on w3schools
+* see if possible to eliminate jquery
