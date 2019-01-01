@@ -35,9 +35,7 @@ a:link {
     color: #f2f3f4;
   }
   
-  .text-container {
-    text-align: center;
-  }
+
   
   .text-shadebox {
     background: rgba(0, 0, 0, 0.7);
@@ -158,47 +156,30 @@ a:link {
     vertical-align: middle;
   }
   
-  .poem-box {
-    width: 20em;
-    height: 25em;
+  .poem-border {
+  
     background: rgba(0, 0, 0, 0.7);
-    text-align: center;
     border-style: groove;
     border-width: thin;
     box-shadow: 0em 0.1em 4em 1.5em #000000;
-    margin-top: 12em;
+    
   }
   
-  .pb-right {
-    float: right;
-    margin-right: 2.5em;
-  }
-  
-  .pb-left {
-    float: left;
-    margin-left: 2.5em;
-  }
+ 
   
   .poem-text {
     color: #87cc1d;
     -webkit-text-stroke: 0.25px black;
-    vertical-align: middle;
-    float: left;
     font-size: small;
-    margin: 5em 0em 1em 1.5em;
-    width: 18em;
-    padding-left: 2em;
+  
   }
   
   .poem-trans {
     -webkit-text-stroke: 0.01em black;
-    vertical-align: middle;
-    float: left;
+   
     font-size: small;
     color: #f2f3f4;
-    margin: 3em 0em 0em 1.5em;
-    width: 18em;
-    padding-left: 2em;
+   
   }
   
   .poem-vert {
@@ -206,9 +187,7 @@ a:link {
     vertical-align: middle;
     width: 1em;
     word-wrap: break-word;
-    margin-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
+   
   }
   
   
@@ -234,21 +213,17 @@ a:link {
   .sidebar1 {
     width: 30%;
     margin: 1em;
-    float: left;
+   
   }
   
   .timeline-col {
     text-align: center;
     width: 30%;
     margin: 3em 1em 1em 1em;
-    float: left;
+    
   }
   
-  .sidebar2 {
-    width: 30%;
-    margin: 1em;
-    float: right;
-  }
+  
   
   .timeline {
     padding: 2em 1em 1em 0em;
@@ -274,37 +249,38 @@ a:link {
   
   /* as these are unique items, with specific styling concerns, is it legitimate to use ID and class chain? */
   
-  
-  #bonfires .poem-vert {
-    padding-top: 3em;
+  /* correct method of handling writing directions in flex */
+  /* This will force flex-direction: row to display vertically */
+  .nihongo {
+    writing-mode: vertical-lr;
   }
   
-  #shower.poem-box {
-    margin-top: 2em;
+  .sidebar2 {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+    height: auto;
+    border: solid;
   }
+
+  .flex-poem-box {
   
-  #shower .poem-vert {
-    padding-top: 3em;
+    width: 80%;
+    max-height: 80%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
   }
-  
-  #duck .poem-vert {
-    margin-top: 1.5em;
+
+  @media screen and (min-width: 1000px) {
+    body {
+      height: 6800px;
+    }
   }
-  
-  #cat .poem-vert {
-    margin-top: 2.5em;
-  }
-  
-  #hat .poem-vert {
-    margin-top: 1em;
-  }
-  
-  #dew .poem-vert {
-    padding-top: 1em;
-  }
-  
-  #fly .poem-text {
-    margin-top: 2em;
-  }
-  
-  
+    

@@ -1,4 +1,11 @@
-.container {
+body {
+    background: url(https://lh3.googleusercontent.com/uBF21Z_f-nTj-Whd-RYFBfuUdI9P-g06C6fA23_1eB4M5qaWcjPj7kN4RNlsuBdhrIryDL_SwWOzgqrMQUYUkTMKh40ZOFdGG6mBt0vxYvdouvH_eRmWDmCTN-m-Vx-MbFep0MErty4YhhyXd3-9I3LM2KF8OFaBRmkmuBwn2X1niLKtPfPzzuku9NBnGZzuc4fkrUxzLOn0QXU5p0BZaNOUXRFZyGTqLIceNZhLD-LvryJFpDRcDfz31UfT9XsmPKibLoMLGDJGnNcYFWtqkVqVFniQ3jvA3bpaJG-u-kcnVz7OH4LRXwX1QjmIGQrq_XCI0DfRfIHShvyWgPLGDO1-9LBxZCf8KiI2YQsoOa-M8rSScb8voZk9tNlN40lfzTAJaSxOFnQtUN-UVxF_7H4h95N6E8dHNrvTcigE0JAIp3vaTwOqFgbW95ZA6hyniy1L6St7Z6okz8-7a5BUi08-U3BVyN_puXPq-aIj0krLEj8oCZlrp4-6DptxQx5ZsVgKESiVQCjLYnw1RTnSZsz3cwLV88faMOidmB-smdRCh3OU7D8M73Ei-D7GyiHY0vNKuHLABlyMxiSqxvyrSj607F2Xbs4_iQGkArHEJIZiZSlKmpykLWtbr0z6KeOxwMnnUcBnqJLgrtqSoecIGwTnArUcYsUQ-ELrpZKAHqsmeg=w704-h938-no-tmp.jpg)
+    no-repeat center fixed;
+    background-size: cover;
+    background-color: #000000;
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 20% 20% 20% 20% 20%;
@@ -8,3 +15,97 @@
 .item {
     border: solid;
 }
+
+
+/* General styling (ie; common to mobile and other devices) */  
+  
+a:link {
+    color: teal ;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: teal ;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: gold;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: green;
+    text-decoration: none;
+  }
+
+  h2 {
+    color: #f2f3f4;
+  }
+
+
+  .matcha {
+    color: #87cc1d;
+  }
+
+  .link-banner {
+    color: #f2f3f4;
+    -webkit-text-stroke: 0.02em black;
+  }
+
+  .main-text {
+   
+    border-style: groove;
+    border-width: thin;
+    box-shadow: 0px 1px 16px 6px #000000;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .poem-text {
+    color: #87cc1d;
+    -webkit-text-stroke: 0.25px black;
+  }
+  
+  .poem-trans {
+    -webkit-text-stroke: 0.01em black;
+    font-size: small;
+    color: #f2f3f4;
+  }
+
+  .poem-box {
+    background: rgba(0, 0, 0, 0.7);
+    border-style: groove;
+    border-width: thin;
+    box-shadow: 0em 0.1em 4em 1.5em #000000;
+  }
+
+  .issa-portrait {
+    border-style: groove;
+    border-width: thick;
+    box-shadow: 0em 0.1em 2em 0.5em #000000;
+  }
+  
+  .img-caption {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  header {
+    /* -webkit-text-fill-color: transparent;*/
+    -webkit-text-stroke: 0.05em black;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadebox {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+.custom-list {
+    color: #f2f3f4;
+}
+
+  /* ?? Is chaining like this good practice? ??
+Required slightly darker background for contrast - better to just make a separate class? */
+.timeline-col.text-shadebox {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
