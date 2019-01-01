@@ -5,12 +5,55 @@ body {
     background-color: #000000;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+header {
+  /* -webkit-text-fill-color: transparent;*/
+  -webkit-text-stroke: 0.05em black;
+  background: rgba(0, 0, 0, 0.5);
 
+  grid-area: header;
 }
+
+.image-container {
+  grid-area: pic;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.sidebar1 {
+  grid-area: sidebar1;
+}
+
+.sidebar2 {
+  grid-area: sidebar2;
+}
+
+.timeline {
+  grid-area: content;
+}
+
+.link-banner {
+  grid-area: link-banner;
+}
+
+.author-sig {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+  "header     header    header  header  header    header"
+  "......     ......    pic     pic     ......    ......"
+  "......     intro     intro   intro   intro     ......"
+  "sidebar1   sidebar1  content content sidebar2  sidebar2"
+  "link-banner .....    ......  ......  ......    ......"
+  "......     ......    footer  ......  ......    ......";
+}
+
 
 .item {
     border: solid;
@@ -89,12 +132,6 @@ a:link {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  header {
-    /* -webkit-text-fill-color: transparent;*/
-    -webkit-text-stroke: 0.05em black;
-    background: rgba(0, 0, 0, 0.5);
-  }
-
   .text-shadebox {
     background: rgba(0, 0, 0, 0.7);
   }
@@ -103,9 +140,7 @@ a:link {
     color: #f2f3f4;
 }
 
-  /* ?? Is chaining like this good practice? ??
-Required slightly darker background for contrast - better to just make a separate class? */
-.timeline-col.text-shadebox {
+.timeline.text-shadebox {
     background: rgba(0, 0, 0, 0.8);
   }
 
