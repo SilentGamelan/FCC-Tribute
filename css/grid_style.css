@@ -15,6 +15,7 @@ header {
 
 .image-container {
   grid-area: pic;
+
 }
 
 .intro {
@@ -30,7 +31,7 @@ header {
 }
 
 .timeline {
-  grid-area: content;
+  grid-area: main;
 }
 
 .link-banner {
@@ -41,15 +42,16 @@ header {
   grid-area: footer;
 }
 
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: minmax(100px, auto);
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:     auto auto auto auto auto auto;
   grid-template-areas:
   "header     header    header  header  header    header"
   "......     ......    pic     pic     ......    ......"
   "......     intro     intro   intro   intro     ......"
-  "sidebar1   sidebar1  content content sidebar2  sidebar2"
+  "sidebar1   sidebar1  main    main    sidebar2  sidebar2"
   "link-banner .....    ......  ......  ......    ......"
   "......     ......    footer  ......  ......    ......";
 }
