@@ -1,3 +1,15 @@
+- Adjust poembox margins to % to give some leeway when resizing screen
+    need text in boxes to shift to left - seems like english and trans of
+    poem
+    have hanging margin thats pushing the kanji float out of flow
+
+- Make sure image is also resizing
+- adjust semantic tags in float version.
+
+* Finish refactoring grid version
+- see if able to recreate custom bullet points in grid version
+- try to use flex boxes for spacing sidebars?
+
 * Correct styling to avoid need to use bootstrap
     - currently text looks wrong without it
         font?
